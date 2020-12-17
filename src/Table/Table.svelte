@@ -1,13 +1,5 @@
 <script lang="ts">
-  /////////////////////////////////
-  // REQUIRED FOR MS GRAPH       //
-  /////////////////////////////////
-
-  import { Overlay, Snackbar, Button } from 'svelte-materialify';
   import { Select } from 'svelte-materialify/src';
-  import Switch from 'svelte-materialify/src/components/Switch';
-
-  /////////////////////////////////
 
   import { circIn } from 'svelte/easing';
   import query from 'json-query';
