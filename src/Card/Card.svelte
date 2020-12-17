@@ -1,8 +1,13 @@
 <script lang="ts">
-  import { description, title } from './Card';
+  export let title: string = 'UI,UX Concepts';
+  export let description: string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quas sapiente voluptate earum natus facilis
+        dolor deserunt dolorum tempora obcaecati consequatur rem, vel distinctio perferendis tempore nemo sequi eos
+        accusantium.`;
 </script>
 
 <style lang="postcss" src="./Card.postcss">
+  div {
+  }
 </style>
 
 <div class="card-container">

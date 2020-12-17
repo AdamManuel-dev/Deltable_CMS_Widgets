@@ -67,9 +67,6 @@ export default {
     file: 'public/build/bundle.js',
   },
   plugins: [
-    _typescript({
-      sourceMap: isDev
-    }),
     svelte({
       // enable run-time checks when not in production
       dev: !isProduction,
@@ -98,11 +95,13 @@ export default {
       },
       preprocess: sveltePreprocess({
         postcss: postcss({
+          extract: 'public/build/bundle.css',
           plugins,
         }),
         typescript,
         scss: scss({
           /* scss options */
+          includePaths: ['src/theme'],
         }),
       }),
     }),
@@ -117,6 +116,9 @@ export default {
       dedupe: ['svelte'],
     }),
     commonjs(),
+    _typescript({
+      sourceMap: isDev
+    }),
 
     // In dev mode, call `npm run start` once
     // the bundle has been generated
