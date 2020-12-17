@@ -101,7 +101,7 @@ export default {
         typescript,
         scss: scss({
           /* scss options */
-          includePaths: ['src/theme'],
+          includePaths: ['src/theme', './src/theme/_material-theme.scss', './node_modules/svelte-materialify/src/styles'],
         }),
       }),
     }),
