@@ -3495,6 +3495,11 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
+svelte-dnd-action@^0.6.25:
+  version "0.6.25"
+  resolved "https://registry.yarnpkg.com/svelte-dnd-action/-/svelte-dnd-action-0.6.25.tgz#45b9109da2e4646e80761644a033fd98c4de5204"
+  integrity sha512-Kp/IP/hU6p3WGy9pX8xhzAx+SUPWBBmg6lTiZPbsUj4vhSo5iuo46eC0eIGknGzBPt+GKX7koTKtNcYxM8Uyxw==
+
 svelte-hmr@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.12.0.tgz#de3616d09a902fb7b0a014f1b3acdded1da352f6"
