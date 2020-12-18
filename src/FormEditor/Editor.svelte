@@ -49,10 +49,13 @@
 
 <style>
   /* your styles go here */
+  * {
+    outline: none !important;
+  }
 </style>
 
 <div class="relative w-full h-full">
-  <div class="absolute top-6 right-12">
+  <!-- <div class="absolute top-6 right-12">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="rgba(239, 68, 68, 1)"
@@ -62,7 +65,7 @@
     >
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
     </svg>
-  </div>
+  </div> -->
   <div class="flex flex-row items-center justify-between w-full p-12">
     <div>
       <h1 class="w-full p-3 text-7xl">Form Editor</h1>
@@ -107,6 +110,7 @@
   <!-- markup (zero or more items) goes here -->
   <div
     class="flex flex-col items-center justify-start w-full"
+    style="outline: none"
     use:dndzone={{ items, flipDurationMs }}
     on:consider={handleDndConsider}
     on:finalize={handleDndFinalize}
@@ -122,7 +126,7 @@
         />
         <div class="flex flex-row items-center justify-between w-full p-4 bg-green-500 rounded-md">
           <div class="flex flex-row items-center justify-between">
-            <div class="p-3 -ml-3 cursor-move">
+            <div class="p-3 -ml-3">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-9">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -151,6 +155,13 @@
       </div>
     {/each}
   </div>
+  <AddButton
+    addPosition={items.length}
+    on:add={({ detail }) => {
+      dialog = !dialog;
+      console.log(detail);
+    }}
+  />
   <div class="flex flex-row items-center justify-around p-8">
     <Button class="text-white red">Back</Button>
     <Button>Preview</Button>
