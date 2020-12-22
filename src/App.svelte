@@ -1,6 +1,10 @@
 <script lang="ts">
   import DragCol from './DragList/DragCol.svelte';
   import KanBan from './KanBan/KanBan.svelte';
+  // import FacebookPost from './Social/facebook/facebookPost.svelte';
+  // import FacebookVideo from './Social/facebook/facebookVideo.svelte';
+  // import FacebookComments from './Social/facebook/facebookComments.svelte';
+  import FacebookShareDialog from './Social/Facebook/Dialog/FacebookShareDialog.svelte';
   import Card from './Card/Card.svelte';
   import Table from './Table/Table.svelte';
   import { onMount } from 'svelte';
@@ -57,6 +61,7 @@
 
 <TailwindCSS />
 <MaterialApp theme={'dark'}>
-  <!-- <KanBan /> -->
-  <Editor />
+  <KanBan />
+  <!-- <Editor /> -->
+  <!-- <FacebookShareDialog></FacebookShareDialog> -->
 </MaterialApp>
