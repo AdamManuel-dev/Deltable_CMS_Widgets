@@ -11,7 +11,9 @@
   import TailwindCSS from './TailwindCSS.svelte';
   import Editor from './FormEditor/Editor.svelte';
   import { MaterialApp, Alert, Button, Card as MatCard, CardTitle } from 'svelte-materialify/src';
-  import QRCode from "./QRCode/QRCode.svelte"
+  // import QRCode from "./QRCode/QRCode.svelte"
+  // import VideoOut from "./video/videoOutput.svelte";
+  import PDFViewer from "./PDFViewer/PDFViewer.svelte";
 
   export let name;
   export let data = [
@@ -64,5 +66,6 @@
 <MaterialApp theme={'dark'}>
   <!-- <KanBan /> -->
   <!-- <Editor /> -->
-  <QRCode url="http://deltable.io/" size=200/>
+  <PDFViewer />
+  <!-- <QRCode url="http://deltable.io/" size=200/> -->
 </MaterialApp>
