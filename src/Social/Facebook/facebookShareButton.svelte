@@ -1,7 +1,7 @@
 <!-- https://developers.facebook.com/docs/plugins/share-button -->
 <script>
     let shareUrl = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse";
-    let dataLayout = "standard" //standard (default), button_count, button or box_count
+    let dataLayout = "button_count" //standard (default), button_count, button or box_count
     let dataSize = "small"
 
     window.fbAsyncInit = function() {

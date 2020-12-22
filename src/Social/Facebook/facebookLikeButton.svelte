@@ -1,8 +1,6 @@
 <!-- Facebook Like Button Standards -->
 <!-- https://developers.facebook.com/docs/plugins/like-button -->
 <script >
-import { dataset_dev } from "svelte/internal";
-
 
 
     let likeUrl = "https://developers.facebook.com/docs/plugins/";
@@ -11,7 +9,7 @@ import { dataset_dev } from "svelte/internal";
     let dataAction = "Like"
     let dataLayout = "standard"
     let dataWidth = ""
-    let dataColorScheme ="dark"
+    let dataColorScheme ="light"
 
   
       window.fbAsyncInit = function() {

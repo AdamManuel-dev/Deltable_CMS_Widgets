@@ -4,7 +4,7 @@
   // import FacebookPost from './Social/facebook/facebookPost.svelte';
   // import FacebookVideo from './Social/facebook/facebookVideo.svelte';
   // import FacebookComments from './Social/facebook/facebookComments.svelte';
-  import FacebookShareButton from './Social/facebook/facebookShareButton.svelte';
+  import FacebookShareDialog from './Social/Facebook/Dialog/FacebookShareDialog.svelte';
   import Card from './Card/Card.svelte';
   import Table from './Table/Table.svelte';
   import { onMount } from 'svelte';
@@ -61,7 +61,7 @@
 
 <TailwindCSS />
 <MaterialApp theme={'dark'}>
-  <!-- <KanBan /> -->
+  <KanBan />
   <!-- <Editor /> -->
-  <FacebookShareButton></FacebookShareButton>
+  <!-- <FacebookShareDialog></FacebookShareDialog> -->
 </MaterialApp>

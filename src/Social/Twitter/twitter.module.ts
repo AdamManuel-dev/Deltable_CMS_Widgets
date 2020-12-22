@@ -1,4 +1,3 @@
-import twitter from './twitter.ts';
 export default {
 
     data() {
@@ -26,8 +25,8 @@ export default {
         }
     },
 
-    oncreate() {
-        twitter.loadAPI()
-    }
+    // oncreate() {
+    //     twitter.loadAPI()
+    // }
 
 }
