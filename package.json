@@ -8,6 +8,7 @@
     "@types/facebook-js-sdk": "^3.3.1",
     "autoprefixer": "^10.1.0",
     "cssnano": "^4.1.10",
+    "facebook-js-sdk": "^0.3.4",
     "json-query": "^2.2.2",
     "node-sass": "^5.0.0",
     "nollup": "^0.13.13",
