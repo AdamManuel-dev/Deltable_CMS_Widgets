@@ -14,6 +14,8 @@
   // import QRCode from "./QRCode/QRCode.svelte"
   // import VideoOut from "./video/videoOutput.svelte";
   import PDFViewer from "./PDFViewer/PDFViewer.svelte";
+  import TextEditor from "./TextEditor/TextEditor.svelte";
+
 
   export let name;
   export let data = [
@@ -66,6 +68,7 @@
 <MaterialApp theme={'dark'}>
   <!-- <KanBan /> -->
   <!-- <Editor /> -->
+  <TextEditor />
   <PDFViewer />
   <!-- <QRCode url="http://deltable.io/" size=200/> -->
 </MaterialApp>

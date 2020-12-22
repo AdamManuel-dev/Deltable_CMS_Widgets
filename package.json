@@ -35,7 +35,8 @@
   },
   "dependencies": {
     "sirv-cli": "^1.0.0",
-    "svelte-pdf": "^1.0.9"
+    "svelte-pdf": "^1.0.9",
+    "svelte-quill": "^1.2.0"
   },
   "scripts": {
     "build": "rollup -c",
