@@ -1,16 +1,16 @@
 <script lang="ts">
-	import Video from './video/video.svelte';
   import DragCol from './DragList/DragCol.svelte';
   import KanBan from './KanBan/KanBan.svelte';
+  // import FacebookPost from './Social/facebook/facebookPost.svelte';
+  // import FacebookVideo from './Social/facebook/facebookVideo.svelte';
+  // import FacebookComments from './Social/facebook/facebookComments.svelte';
+  import FacebookShareDialog from './Social/Facebook/Dialog/FacebookShareDialog.svelte';
   import Card from './Card/Card.svelte';
   import Table from './Table/Table.svelte';
   import { onMount } from 'svelte';
   import TailwindCSS from './TailwindCSS.svelte';
   import Editor from './FormEditor/Editor.svelte';
-  
   import { MaterialApp, Alert, Button, Card as MatCard, CardTitle } from 'svelte-materialify/src';
-  import Reviews from './Reviews/reviews.svelte';
-import SlideshowReview from './Reviews/slideshowReview.svelte';
 
   export let name;
   export let data = [
@@ -62,6 +62,6 @@ import SlideshowReview from './Reviews/slideshowReview.svelte';
 <TailwindCSS />
 <MaterialApp theme={'dark'}>
   <!-- <KanBan /> -->
-  <Editor />
+  <!-- <Editor /> -->
+  <FacebookShareDialog />
 </MaterialApp>
-<!-- <SlideshowReview/> -->
