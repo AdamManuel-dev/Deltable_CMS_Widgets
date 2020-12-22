@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
+	import { fade, fly, slide } from 'svelte/transition';
+import Reviews from './reviews.svelte';
 
 export let Review = [
     {
@@ -40,7 +41,7 @@ export let Review = [
   ] 
   export let currentSlide = 0;
   let rev = [...Review]
-  	$: rev = rev.slice(0, Review.length >= 9 ? 9 : Review.length);
+  	// $: rev = rev.slice(0, Review.length >= 9 ? 9 : Review.length);
 
   	var rotate = function (nums, k) {
 		if (nums.length > k) {
@@ -60,6 +61,8 @@ export let Review = [
   let nextSlide = () => gotoSlide(currentSlide + 1);
   let gotoSlide = (num) => {
     rev = [...rotate(Review, -num)];
+    // Review = [...rotate(Review, -num)]
+    // if(num !== Reviews.length) currentSlide = 0 
   }
   let hasOnlyOneImage = false;
 $: hasOnlyOneImage = Review.length === 1;
@@ -69,20 +72,22 @@ $: hasOnlyOneImage = Review.length === 1;
 </style>
 
 
-  <div class="overflow-hidden rounded-md shadow-inner" transition:fade={{duration: 250}}>
+  <div class="overflow-hidden rounded-md shadow-inner" >
   <!-- large image on slides -->
-   <div class="container px-5 py-24 mx-auto" transition:fade={{duration: 250}}>
-    <div class="flex flex-wrap justify-center -m-4 " transition:fade={{duration: 250}}>
-	{#each [rev[currentSlide]] as re (currentSlide)}
-		 <div class="p-4 mb-6 lg:w-1/3 lg:mb-0" >
-          <div class="h-full text-center ">
-            <img alt="{re.alt}" class="inline-block object-cover object-center w-20 h-20 mb-8 bg-gray-100 border-2 border-gray-200 rounded-full" src="{re.image}">
+   <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap justify-center -m-4 transition-all duration-500 ease-in-out" >
+	{#each rev as  re, _currentSlide}
+		 {#if currentSlide === _currentSlide}
+        <div class="p-4 mb-6 lg:w-1/3 lg:mb-0" >
+          <div class="h-full text-center">
+            <img in:fly={{duration: 250, x: 2500}} out:fly={{duration: 250, x: 2500}} alt="{re.alt}" class="inline-block object-cover object-center w-20 h-20 mb-8 bg-gray-100 border-2 border-gray-200 rounded-full" src="{re.image}">
             <p class="leading-relaxed">{re.review}</p>
             <span class="inline-block w-10 h-1 mt-6 mb-4 bg-indigo-500 rounded"></span>
             <h2 class="text-sm font-medium tracking-wider text-gray-500 title-font">{re.reviewer}</h2>
             <p class="text-gray-500">{re.title}</p>
           </div>
         </div>
+     {/if}
   {/each}
   </div>
   </div>
