@@ -62,6 +62,6 @@
 <TailwindCSS />
 <MaterialApp theme={'dark'}>
   <!-- <KanBan /> -->
-  <!-- <Editor /> -->
-  <FacebookShareDialog />
+  <Editor />
+  <!-- <FacebookShareDialog></FacebookShareDialog> -->
 </MaterialApp>

@@ -20,6 +20,30 @@
       id: 2,
       value: 'Field 3',
     },
+    {
+      id: 3,
+      value: 'Field 1',
+    },
+    {
+      id: 4,
+      value: 'Field 2',
+    },
+    {
+      id: 5,
+      value: 'Field 3',
+    },
+    {
+      id: 6,
+      value: 'Field 1',
+    },
+    {
+      id: 7,
+      value: 'Field 2',
+    },
+    {
+      id: 8,
+      value: 'Field 3',
+    },
   ];
   const flipDurationMs = 300;
   function handleDndConsider(e) {
@@ -28,23 +52,11 @@
   function handleDndFinalize(e) {
     items = e.detail.items;
   }
-  export let fields = [
-    'Field 1',
-    'Field 2',
-    'Field 3',
-    'Field 1',
-    'Field 2',
-    'Field 3',
-    'Field 1',
-    'Field 2',
-    'Field 3',
-    'Field 1',
-    'Field 2',
-    'Field 3',
-  ];
+  export let editName: string = 'Form';
   let dialog = false;
   let edit = false;
   let confirmDelete = false;
+  let index;
 </script>
 
 <style>
@@ -68,7 +80,7 @@
   </div> -->
   <div class="flex flex-row items-center justify-between w-full p-12">
     <div>
-      <h1 class="w-full p-3 text-7xl">Form Editor</h1>
+      <h1 class="w-full p-3 text-7xl">{editName} Editor</h1>
       <h4 class="w-full p-3 text-3xl">Category</h4>
       <!-- <Select
         solo
@@ -78,14 +90,14 @@
       /> -->
     </div>
     <div>
-      <h4 class="w-full p-3 text-xl text-right">Next Status is...</h4>
+      <h4 class="w-full p-3 text-xl text-right">triggers...</h4>
       <!-- <Select
         solo
         items={[{ name: 'Assign Appointment', value: 'foo' }, { name: 'Status 2', value: 'bar' }, { name: 'Status 3', value: 'fizz' }, { name: 'Buzz', value: 'buzz' }]}
         value={['Assign Appointment']}
         placeholder="Solo"
       /> -->
-      <h1 class="w-full p-3 text-4xl text-right">Assign Appointment</h1>
+      <h1 class="w-full p-3 text-4xl text-right">Callback URL</h1>
     </div>
   </div>
   <div class="flex flex-row items-center justify-center -mt-10">
@@ -104,9 +116,26 @@
       </ExpansionPanels>
     </div>
   </div>
-  <AddField bind:active={dialog} />
-  <EditField bind:active={edit} />
-  <DeleteConfirmation bind:active={confirmDelete} />
+  <AddField
+    bind:active={dialog}
+    on:save={({ detail }) => {
+      console.log('AddField', detail);
+    }}
+  />
+  <EditField
+    bind:active={edit}
+    {index}
+    on:save={({ detail }) => {
+      console.log('Edit Field', detail);
+    }}
+  />
+  <DeleteConfirmation
+    {index}
+    bind:active={confirmDelete}
+    on:delete={({ detail }) => {
+      console.log('delete confirmation', detail);
+    }}
+  />
   <!-- markup (zero or more items) goes here -->
   <div
     class="flex flex-col items-center justify-start w-full"
@@ -137,6 +166,7 @@
             <Button
               class="text-white black"
               on:click={() => {
+                index = i;
                 edit = !edit;
               }}
             >
@@ -145,6 +175,7 @@
             <Button
               class="red white-text"
               on:click={() => {
+                index = i;
                 confirmDelete = !confirmDelete;
               }}
             >
@@ -163,7 +194,7 @@
     }}
   />
   <div class="flex flex-row items-center justify-around p-8">
-    <Button class="text-white red">Back</Button>
-    <Button>Preview</Button>
+    <Button class="p-12 text-white red">Back</Button>
+    <Button class="p-12">Preview</Button>
   </div>
 </div>
