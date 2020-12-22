@@ -79,6 +79,11 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
+"@stencil/core@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.2.0.tgz#f92b480a387bce688a368b2fb23207f1acd45bc2"
+  integrity sha512-2V+DEUs9wvkcgnIIs0huye/M1v7x6qEzeOjp056RQlB08U1I4ex3vnBoE0/CrR35wK3ZZv2JYPOfBUuqR+6AAg==
+
 "@types/estree@*":
   version "0.0.45"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.45.tgz#e9387572998e5ecdac221950dab3e8c3b16af884"
@@ -122,6 +127,21 @@
   integrity sha512-2XZovu4NwcqmtZtsBR5XYLw18T8cBCnU2USFHTnYLLHz9fkhnoEMoDsqShJIOFsFhn5aJHjweiUUdTrDGujegA==
   dependencies:
     "@types/node" "*"
+
+"@vime/core@^5.0.0", "@vime/core@^5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@vime/core/-/core-5.0.19.tgz#7f5cef038f0c43c9c0280e1deccc7e7623e4bffd"
+  integrity sha512-wGkNXeT4zd/uhBqHQidH1wZ9/zEiK1q9vYISZMWW8CBOpYD+h1F9TqXgKusVyUUIlCw6vQBZmJwRh3PPq+lvbw==
+  dependencies:
+    "@stencil/core" "2.2.0"
+    stencil-wormhole "^3.2.2"
+
+"@vime/svelte@^5.0.0":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@vime/svelte/-/svelte-5.0.19.tgz#ce015743dd1ea76455586db492ae7fd52782b410"
+  integrity sha512-0HTePpxduZ5d3wsPULy/7pLZvlQu3HG+Jc8kDj59D2qHvsmValhSJrnzyuCEr5wqZAKhykarlX7kO0zydaeJoQ==
+  dependencies:
+    "@vime/core" "^5.0.19"
 
 abbrev@1:
   version "1.1.1"
@@ -1182,6 +1202,11 @@ fast-json-stable-stringify@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz#874bf69c6f404c2b5d99c481341399fd55892633"
   integrity sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
+
+file-saver@^2.0.2:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
+  integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
 
 fill-range@^7.0.1:
   version "7.0.1"
@@ -2405,6 +2430,11 @@ path-type@^3.0.0:
   dependencies:
     pify "^3.0.0"
 
+pdfjs-dist@^2.5.207:
+  version "2.5.207"
+  resolved "https://registry.yarnpkg.com/pdfjs-dist/-/pdfjs-dist-2.5.207.tgz#b5e8c19627be64269cd3fb6df3eaaf45ddffe7b6"
+  integrity sha512-xGDUhnCYPfHy+unMXCLCJtlpZaaZ17Ew3WIL0tnSgKFUZXHAPD49GO9xScyszSsQMoutNDgRb+rfBXIaX/lJbw==
+
 performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
@@ -3374,6 +3404,11 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
+stencil-wormhole@^3.2.2:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/stencil-wormhole/-/stencil-wormhole-3.4.0.tgz#7cdcd571a40024dcd1f944e0b18cb6a4630e84d9"
+  integrity sha512-TXqH4dUzHtJfWAVF7lU36AyeI3H/0Mj0lFJOPzWxZVb+nDmAsNlu8GUxA7zn4/DgZDNS3eenB8H1pFUkMTkgDw==
+
 string-width@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-1.0.2.tgz#118bdf5b8cdc51a2a7e70d211e07e2b0b9b107d3"
@@ -3533,6 +3568,14 @@ svelte-materialify@^0.3.4:
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/svelte-materialify/-/svelte-materialify-0.3.4.tgz#53bf1701c543f90e13b9f823ce123053ce1e3c35"
   integrity sha512-94P2UMEFvEFHLksyZllFVU047tl/xkbA8aOlASaAzfEXfWQiWaGiuEnmKywT2AFImoPgFRseL++/6v2F6EBSig==
+
+svelte-pdf@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/svelte-pdf/-/svelte-pdf-1.0.9.tgz#dd5227c33032ee2fc9e8ef851161ef1024425e5d"
+  integrity sha512-hqj9CiM1ur5h+5HzkWSsfuiigG+40Kmtr//z5yPok7pctmMLpH8fKW+/8YzkbjmZP9zd2FdhgxCcNqa/oq8XCw==
+  dependencies:
+    file-saver "^2.0.2"
+    pdfjs-dist "^2.5.207"
 
 svelte-preprocess@^4.6.1:
   version "4.6.1"
