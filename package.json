@@ -6,6 +6,8 @@
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@rollup/plugin-typescript": "^8.1.0",
     "@types/facebook-js-sdk": "^3.3.1",
+    "@vime/core": "^5.0.0",
+    "@vime/svelte": "^5.0.0",
     "autoprefixer": "^10.1.0",
     "cssnano": "^4.1.10",
     "facebook-js-sdk": "^0.3.4",
@@ -32,7 +34,9 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.0"
+    "sirv-cli": "^1.0.0",
+    "svelte-pdf": "^1.0.9",
+    "svelte-quill": "^1.2.0"
   },
   "scripts": {
     "build": "rollup -c",
