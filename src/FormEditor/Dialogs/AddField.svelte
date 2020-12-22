@@ -8,11 +8,13 @@
   export let name: string = '';
   export let type: string = '';
   export let placeholder: string = '';
+  export let index: number;
 
   const save = () => {
     dispath('save', {
       name,
       type,
+      index,
       placeholder,
     });
     close();

@@ -117,6 +117,7 @@
     </div>
   </div>
   <AddField
+    {index}
     bind:active={dialog}
     on:save={({ detail }) => {
       console.log('AddField', detail);
@@ -149,6 +150,7 @@
         <AddButton
           addPosition={i}
           on:add={({ detail }) => {
+            index = i;
             dialog = !dialog;
             console.log(detail);
           }}
@@ -190,11 +192,19 @@
     addPosition={items.length}
     on:add={({ detail }) => {
       dialog = !dialog;
+      index = items.length;
       console.log(detail);
     }}
   />
   <div class="flex flex-row items-center justify-around p-8">
     <Button class="p-12 text-white red">Back</Button>
-    <Button class="p-12">Preview</Button>
+    <Button
+      class="p-12"
+      on:click={() => {
+        console.log(items);
+      }}
+    >
+      Preview
+    </Button>
   </div>
 </div>
