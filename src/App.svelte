@@ -11,6 +11,7 @@
   import TailwindCSS from './TailwindCSS.svelte';
   import Editor from './FormEditor/Editor.svelte';
   import { MaterialApp, Alert, Button, Card as MatCard, CardTitle } from 'svelte-materialify/src';
+  import QRCode from "./QRCode/QRCode.svelte"
 
   export let name;
   export let data = [
@@ -61,7 +62,7 @@
 
 <TailwindCSS />
 <MaterialApp theme={'dark'}>
-  <KanBan />
+  <!-- <KanBan /> -->
   <!-- <Editor /> -->
-  <!-- <FacebookShareDialog></FacebookShareDialog> -->
+  <QRCode url="http://deltable.io/" size=200/>
 </MaterialApp>
