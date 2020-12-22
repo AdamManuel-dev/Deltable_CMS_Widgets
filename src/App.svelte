@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Video from './video/video.svelte';
   import DragCol from './DragList/DragCol.svelte';
   import KanBan from './KanBan/KanBan.svelte';
   import Card from './Card/Card.svelte';
@@ -6,7 +7,10 @@
   import { onMount } from 'svelte';
   import TailwindCSS from './TailwindCSS.svelte';
   import Editor from './FormEditor/Editor.svelte';
+  
   import { MaterialApp, Alert, Button, Card as MatCard, CardTitle } from 'svelte-materialify/src';
+  import Reviews from './Reviews/reviews.svelte';
+import SlideshowReview from './Reviews/slideshowReview.svelte';
 
   export let name;
   export let data = [
@@ -60,3 +64,4 @@
   <!-- <KanBan /> -->
   <Editor />
 </MaterialApp>
+<!-- <SlideshowReview/> -->
